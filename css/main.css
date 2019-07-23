@@ -1,0 +1,99 @@
+body {font-family: Helvetica, Arial, sans-serif;}
+
+.container {
+    margin: 0 auto;
+    background-color: #efefef;
+    width: 100%;
+}
+
+
+
+.nav { 
+    display: inline-block;
+    width: 15%;
+    height: 30px;
+    float: right;
+}
+
+.banner {
+    height: 200px;
+}
+
+.box {
+    background-color: skyblue;
+    color: black;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+.logo {
+    width: 50%;
+    height: 100px;
+    display: inline-block;
+}
+
+.article {
+    height: 450px;
+}
+
+#burgerCon {
+    margin-bottom: 20px;
+    position: fixed;
+    top:85px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+
+    /* this chould be off by default and toggled on with JavaScript */
+    display: none;
+}
+
+.show-moblie-nav {display: block !important;}
+
+#burgerCon li {
+    padding:20px;
+    border-top: thin solid black;
+    text-align: center;
+}
+
+#burgerCon a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        max-width: 1200px; 
+    }
+
+    #mainHeader {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+
+    .box {flex: 1 1 375px;}
+
+    .nav {flex: 0 1 600px;}
+
+    #burgerMenu {
+        display: none;
+    }
+
+    .logo {
+        order: -1;
+        flex: 0 1 220px;
+        margin-left: 10px;
+        margin-right: auto;
+    }
+    
+
+
+    .products {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
